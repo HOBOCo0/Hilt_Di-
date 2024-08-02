@@ -6,12 +6,9 @@ import javax.inject.Inject
 
 @HiltAndroidApp // this annotation generates dagger code behind the scene
 class UserApplication: Application() {
-    @Inject
-    lateinit var userRepository: UserRepository
 
     override fun onCreate() {
         super.onCreate()
-        userRepository.saveUser("abc@xyz.com", "121212")
     }
 
 }
