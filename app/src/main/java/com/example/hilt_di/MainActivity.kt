@@ -7,9 +7,13 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
+import javax.inject.Named
+
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
     @Inject
+//    @Named("sql")
+    @SqlQualifier
     lateinit var userRepository: UserRepository
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
