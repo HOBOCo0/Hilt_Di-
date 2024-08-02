@@ -4,8 +4,8 @@ import javax.inject.Inject
 
 const val TAG = "MyTag"
 
-class UserRepository @Inject constructor(){
+class UserRepository @Inject constructor( private val loggrService: LoggerService){
     fun saveUser(email: String, password: String){
-        Log.d(TAG, "user saved in DB")
+        loggrService.log("user saved in DBD")
     }
 }
